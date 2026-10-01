@@ -1,0 +1,11 @@
+seed: 42
+strike: 100.0
+base_rate: 0.05
+base_volatility: 0.20
+trading_days: 250
+exercise_every: 5
+training_paths: 4000
+validation_paths: 1000
+historical_start_step: 250
+low_volatility: 0.15
+high_volatility: 0.30
