@@ -18,7 +18,7 @@ $$
 h_t = \max(K-A_t,0).
 $$
 
-A policy observes normalized spot and average, #(S_t/K,A_t/K)$, and chooses between exercising now and continuing. If it exercises early, its payoff is carried forward to maturity using the risk-free rate available at the contract start. The central paired outcome is therefore
+A policy observes normalized spot and average, $(S_t/K,A_t/K)$, and chooses between exercising now and continuing. If it exercises early, its payoff is carried forward to maturity using the risk-free rate available at the contract start. The central paired outcome is therefore
 
 $$
 \widetilde h_\tau-h_T,
