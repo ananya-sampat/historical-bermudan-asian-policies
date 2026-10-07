@@ -58,7 +58,7 @@ pytest -q
 
 ## Reproducing the local historical run
 
-Place licensed files locally—never commit them—in `data/raw/`:
+Place licensed files locally:
 
 ```text
 crsp_daily.csv
