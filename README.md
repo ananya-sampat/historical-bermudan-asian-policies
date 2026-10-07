@@ -6,7 +6,7 @@ It is an empirical extension of [Learning Exercise Policies for Bermudan Asian O
 
 ## What is being evaluated?
 
-For each eligible one-year CRSP path, the underlying is normalized so that the contract begins at \(S_0=100\), with strike \(K=100\). The arithmetic running average includes the initial price:
+For each eligible one-year CRSP path, the underlying is normalized so that the contract begins at $S_0=100$, with strike $K=100$. The arithmetic running average includes the initial price:
 
 $$
 A_t = \frac{1}{t+1}\sum_{u=0}^{t} S_u.
@@ -18,7 +18,7 @@ $$
 h_t = \max(K-A_t,0).
 $$
 
-A policy observes normalized spot and average, \((S_t/K,A_t/K)\), and chooses between exercising now and continuing. If it exercises early, its payoff is carried forward to maturity using the risk-free rate available at the contract start. The central paired outcome is therefore
+A policy observes normalized spot and average, #(S_t/K,A_t/K)$, and chooses between exercising now and continuing. If it exercises early, its payoff is carried forward to maturity using the risk-free rate available at the contract start. The central paired outcome is therefore
 
 $$
 \widetilde h_\tau-h_T,
@@ -32,7 +32,7 @@ the maturity-equivalent policy payoff less the payoff from holding the same hypo
 
 The project evaluates quadratic Longstaff–Schwartz, cubic ridge, and small neural-network continuation models.
 
-1. **Fixed-policy transfer.** Policies are trained under the parent project's base GBM specification: \(r=5\%\), \(\sigma=20\%\), one year, and 50 exercise dates.
+1. **Fixed-policy transfer.** Policies are trained under the parent project's base GBM specification: $r=5\%$, $\sigma=20\%$, one year, and 50 exercise dates.
 2. **Implied-volatility calibration.** For each historical contract start, the policy is retrained with the same-day 365-day, \(-0.50\)-delta listed-put implied volatility from OptionMetrics and the last available one-year Treasury rate from FRED. The later realized CRSP path is used only for evaluation.
 3. **Regime analysis.** Results are grouped by trailing one-year realized volatility and trailing one-year return, both measured before the contract begins.
 
